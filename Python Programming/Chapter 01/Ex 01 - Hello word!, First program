@@ -1,0 +1,2 @@
+print ("Hello World!\n", end = "")
+print ("This here is a Python program.", end = "")
