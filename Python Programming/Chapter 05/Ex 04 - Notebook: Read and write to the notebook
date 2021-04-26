@@ -1,0 +1,31 @@
+
+choice = 0
+keepGoing = True
+while keepGoing:
+	
+	print("(1) Read the notebook\n(2) Add note\n(3) Empty the notebook\n(4) Quit\n")
+	choice = input("Please select one: ")
+	
+	if int(choice) == 1:
+		readFile = open("notebook.txt", "r")
+		content = readFile.read()
+		print(content ,"\n")
+		readFile.close()
+		
+	
+	elif int(choice) == 2:
+		content = input("Write a new note: ")
+		appendFile = open("notebook.txt", "a")
+		appendFile.write(content)
+		appendFile.close()
+	
+	elif int(choice) == 3:
+		deleteFile = open("notebook.txt", "w")
+		deleteFile.write(content)
+		deleteFile.close()
+		print("Notes deleted.")
+	
+	elif int(choice) == 4:
+		
+		print("Notebook shutting down, thank you.")
+		keepGoing = False
