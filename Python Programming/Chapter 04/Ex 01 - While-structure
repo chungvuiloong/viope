@@ -1,0 +1,6 @@
+
+lap = 0
+
+while 5 > lap:
+	print("This is lap", lap)
+	lap += 1
