@@ -1,0 +1,17 @@
+
+input1 = int(input("Give a number: "))
+input2 = int(input("Give another number: "))
+
+input1Div = input1%2
+input2Div = input2%2
+
+
+	
+if (input1Div == 0) and (input2Div == 0):
+	print("Both numbers are even.")
+	
+elif (input1Div == 0) or (input2Div == 0):
+	print("One of the numbers is even.")    #One of the numbers is even.
+
+else:
+	print("Both numbers are odd.")
