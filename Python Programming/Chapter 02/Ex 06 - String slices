@@ -1,0 +1,10 @@
+string = "desserts" 
+a = string[0:4]
+b = string[-4:]
+c = ''.join(reversed(b)) + ''.join(reversed(a)) 
+
+print("The first 4 characters were: ", a)
+
+print("The last 4 characters were: ", b)
+
+print("The string backwards was: ", c)
