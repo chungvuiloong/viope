@@ -1,0 +1,9 @@
+total = 0
+
+value = input("Give a number: ")
+
+for i in range(0, int(value), +1):
+	total += i
+
+print("The sum was: ", total)
+	
