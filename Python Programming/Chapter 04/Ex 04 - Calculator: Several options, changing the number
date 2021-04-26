@@ -1,0 +1,36 @@
+print("Calculator")
+numFirst = input("Give the first number: ")
+numSecond = input("Give the second number: ")
+
+choice = 0
+while choice != 6:
+
+#Menu
+	print("(1) +\n(2) -\n(3) *\n(4) /\n(5) Change numbers\n(6) Quit\nCurrent numbers: ", numFirst, numSecond)
+
+#Choice				
+	choice = input("Please select something (1-6): ")
+	
+	if int(choice) == 1:
+		result = int(numFirst) + int(numSecond)
+		print("The result is: ", result)
+	
+	elif int(choice) == 2:
+		result = int(numFirst) - int(numSecond)
+		print("The result is: ", result)
+		
+	elif int(choice) == 3:
+		result = int(numFirst) * int(numSecond)
+		print("The result is: ", result)
+		
+	elif int(choice) == 4:
+		result = int(numFirst) / int(numSecond)
+		print("The result is: ", result)
+	
+	elif int(choice) == 5:
+		numFirst = input("Give the first number: ")
+		numSecond = input("Give the second number: ")
+	
+	elif int(choice) == 6:
+		print("Thank you!")
+		break
