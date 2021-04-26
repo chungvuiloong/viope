@@ -1,0 +1,5 @@
+print("Calculator")
+value1 = input("Give the first number: ")
+value2 = input("Give the second number: ")
+
+print("The result is: ", int(value1) + int(value2))
