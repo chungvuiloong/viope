@@ -1,0 +1,12 @@
+keepGoing = True
+
+while keepGoing:
+	
+	value = input("Write something: ")
+	
+	if value == "quit":
+		print("Bye bye!")
+		keepGoing = False
+	else:
+		print(value)
+		keepGoing = True
