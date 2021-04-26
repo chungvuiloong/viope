@@ -1,0 +1,13 @@
+number1 = 10.6411
+number2 = "Stringline!"
+
+# Convert the first variable to an integer, 
+# Multiply the variable with the string by 2. 
+# After this, finalize the program to print out the results in the following way:
+
+number1 = int(number1) 
+number2 *= 2
+
+
+print("Integer conversion cannot do roundings: ", number1)
+print("Multiplying strings also causes trouble: ",number2)
