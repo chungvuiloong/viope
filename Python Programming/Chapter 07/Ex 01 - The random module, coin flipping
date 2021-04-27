@@ -1,0 +1,10 @@
+
+import random
+
+headTails = random.randint(0, 3)
+
+if headTails == 1:
+	print("Heads!")
+
+elif headTails == 0:
+	print("Tails!")
