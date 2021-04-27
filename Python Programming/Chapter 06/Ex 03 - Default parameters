@@ -1,0 +1,23 @@
+
+
+def tester(string):
+	givenstring = "Too short"
+	
+	if len(string) < 10:
+		print(givenstring)
+		
+	elif len(string) > 10:
+		print(string)
+
+
+keepGoing = True
+
+while keepGoing:
+	
+	string = input("Write something (quit ends): ")
+	
+	if string == "quit":
+		keepGoing = False
+	else:
+		tester(string)
+		keepGoing = True
