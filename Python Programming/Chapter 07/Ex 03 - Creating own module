@@ -1,1 +1,6 @@
 
+
+def printme(str):
+	print("I got: ",str)
+	print("The parameter was", len(str) ,"characters long.")
+	return
