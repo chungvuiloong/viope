@@ -2,7 +2,7 @@ import re
 
 def tester(string):
 	givenstring = "Too short"
-	x = re.findall("[xX]", string) # x finder
+	x = re.findall("[xX]", string) # Regex to find both upper and lower x
 	
 	if x:
 		print(string)
