@@ -1,0 +1,28 @@
+import re
+
+def tester(string):
+	givenstring = "Too short"
+	x = re.findall("[xX]", string) # x finder
+	
+	if x:
+		print(string)
+		print("X spotted!")
+		
+	elif len(string) < 10:
+		print(givenstring)
+		
+	elif len(string) > 10:
+		print(string)
+
+
+keepGoing = True
+
+while keepGoing:
+	
+	string = input("Write something (quit ends): ")
+	
+	if string == "quit":
+		keepGoing = False
+	else:
+		tester(string)
+		keepGoing = True
