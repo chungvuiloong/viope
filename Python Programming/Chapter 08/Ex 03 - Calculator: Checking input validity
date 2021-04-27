@@ -1,0 +1,67 @@
+import math
+
+print("Calculator")
+
+numFirst = 0
+numFirstTrue = True
+numSecond = 0
+numSecondTrue = True
+
+while numFirstTrue:
+	numFirst = input("Give a number: ")
+	
+	if (numFirst.isnumeric()) == False:
+		print("This input is invalid.")
+		
+	elif (numFirst.isnumeric()) == True:
+		numFirstTrue = False
+		
+while numSecondTrue:
+	numSecond = input("Give a number: ")
+	
+	if (numSecond.isnumeric()) == False:
+		print("This input is invalid.")
+		
+	elif (numSecond.isnumeric()) == True:
+		numSecondTrue = False
+
+choice = 0
+while choice != 6:
+
+#Menu
+	print("(1) +\n(2) -\n(3) *\n(4) /\n(5)sin(number1/number2)\n(6)cos(number1/number2)\n(7)Change numbers\n(8)Quit\nCurrent numbers: ", numFirst, numSecond)
+
+#Choice				
+	choice = input("Please select something (1-6): ")
+	
+	if int(choice) == 1:
+		result = int(numFirst) + int(numSecond)
+		print("The result is: ", result)
+	
+	elif int(choice) == 2:
+		result = int(numFirst) - int(numSecond)
+		print("The result is: ", result)
+		
+	elif int(choice) == 3:
+		result = int(numFirst) * int(numSecond)
+		print("The result is: ", result)
+		
+	elif int(choice) == 4:
+		result = int(numFirst) / int(numSecond)
+		print("The result is: ", result)
+	
+	elif int(choice) == 5: # sin
+		result = math.sin(int(numFirst)/ int(numSecond))
+		print("The result is: ", result)
+		
+	elif int(choice) == 6: # cos
+		result = math.cos(int(numFirst)/ int(numSecond))
+		print("The result is: ", result)
+		
+	elif int(choice) == 7:
+		numFirst = input("Give the first number: ")
+		numSecond = input("Give the second number: ")
+	
+	elif int(choice) == 8:
+		print("Thank you!")
+		break
