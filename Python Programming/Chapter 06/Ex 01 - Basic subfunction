@@ -1,0 +1,9 @@
+def hello(): # hello function
+	print("Hello there!")
+	
+	
+print("Lets call the subfunction:")
+
+hello()
+
+print("Quitting.")
