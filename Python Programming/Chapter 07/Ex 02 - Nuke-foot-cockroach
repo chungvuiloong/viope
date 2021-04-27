@@ -1,0 +1,97 @@
+import random
+
+# nuke-foot-cockroach
+
+# calculating both rounds the player won, and ties. 
+# If the player wins, print "You WIN!"
+# If they loose "You LOSE!"
+# If the round was a tie, either "It is a tie!" or "Both LOSE!",
+
+myChoice = 0
+numberRounds = 0
+tieCount = 0
+winCount = 0
+list = ["Nuke", "Foot", "Cockroach"]
+
+# enemy choice works DONT CHANGE
+def enemyChoice():
+	num = random.randint(1, 3)
+	
+	if num == 1:
+		enemyValue = "Foot"
+	elif num == 2:
+		enemyValue = "Nuke"
+	elif num == 3:
+		enemyValue = "Cockroach"
+	return enemyValue  #end of enemy choice
+
+while myChoice != "Quit":
+	myChoice = input("Foot, Nuke or Cockroach? (Quit ends): ")
+
+	if myChoice == "Foot":
+		numberRounds = numberRounds+1
+		print("You chose: ", myChoice)
+		print("Computer chose: ", enemyChoice())
+		
+		# Tie counter
+		if myChoice == enemyChoice():
+			tieCount = tieCount+1
+			print("It is a tie!")
+			
+		#Win
+		elif enemyChoice() == "Cockroach":
+			winCount = winCount+1
+			print("You WIN!")
+		
+		#Lose
+		else:
+			print("You LOSE!")
+		
+	elif myChoice == "Nuke":
+		numberRounds = numberRounds+1
+		print("You chose: ", myChoice)
+		print("Computer chose: ", enemyChoice())
+		
+		# Tie
+		if myChoice == enemyChoice():
+			tieCount = tieCount+1
+			print("It is a tie!")
+		
+		#Win
+		elif enemyChoice() == "Foot":
+			winCount = winCount+1
+			print("You WIN!")
+			
+		#Lose
+		else:
+			print("You LOSE!")
+	
+	elif myChoice == "Cockroach":
+		numberRounds = numberRounds+1
+		print("You chose: ", myChoice)
+		print("Computer chose: ", enemyChoice())
+		
+		# Tie
+		if myChoice == enemyChoice():
+			tieCount = tieCount+1
+			print("It is a tie!")
+			
+		#Win
+		elif enemyChoice() == "Nuke":
+			winCount = winCount+1
+			print("You WIN!")
+			
+		#Lose
+		else:
+			print("You LOSE!")
+		
+	elif myChoice == "Quit":
+		print("You played",numberRounds, "rounds, and won", winCount ,"rounds, playing tie in", tieCount ,"rounds.")
+		break
+		
+	else:
+		print("Incorrect selection.")
+
+	
+	# You LOSE!
+	# You WIN!
