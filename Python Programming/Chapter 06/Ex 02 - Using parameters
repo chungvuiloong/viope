@@ -1,0 +1,9 @@
+def poweroftwo(number):
+	poweroftwo = pow(2, number)
+	return poweroftwo
+
+
+number = input("Give a number: ")
+number = int(number)
+
+print("The result is ", poweroftwo(number) )
