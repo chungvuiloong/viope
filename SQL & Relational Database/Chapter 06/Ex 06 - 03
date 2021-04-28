@@ -1,0 +1,2 @@
+UPDATE course
+SET starts = '2009-01-16', lecturer = 'Burroughs Anthony';
