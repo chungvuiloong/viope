@@ -1,0 +1,2 @@
+DELETE FROM course
+   WHERE Courseid = '1010'AND Name = 'Introduction to databases' AND Starts = '2006-09-02';
