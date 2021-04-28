@@ -1,0 +1,65 @@
+import time
+import os.path
+from os import path
+
+##########################
+choice = 0
+keepGoing = True
+
+###########################
+
+#defaultFile = "notebook.txt"
+
+if path.exists("notebook.txt") == False:
+	print("No default notebook was found, created one.")
+	startFile = open("notebook.txt", "w")
+	startFile.close()
+
+##########################
+currentFile = startFile.name
+
+while keepGoing:
+	
+	print("Now using file", currentFile)
+	print("(1) Read the notebook\n(2) Add note\n(3) Empty the notebook\n(4) Change the notebook\n(5) Quit\n")
+	choice = input("Please select one: ")
+	
+	if int(choice) == 1: # Read the notebook
+		readFile = open(currentFile, "r")
+		content = readFile.read()
+		print(content ,"\n")
+		readFile.close()
+		
+		
+	elif int(choice) == 2: # Add note
+		content = input("Write a new note: ")
+		appendFile = open(currentFile, "a")
+		appendFile.write( content+":::"+ time.strftime("%X %x") )
+		appendFile.close()
+		
+		#":::19:01:34 01/03/09"
+	
+	elif int(choice) == 3: # Empty the notebook
+		deleteFile = open(currentFile, "w")
+		deleteFile.write(content)
+		deleteFile.close()
+		print("Notes deleted.")
+		
+	elif int(choice) == 4: # Change Notebook
+		newName = input("Give the name of the new file: ")
+		
+		if path.exists(newName) == False:
+			print("No notebook with that name detected, created one.")
+			newFile = open(newName, "a")
+			currentFile = newFile.name
+			newFile.close()
+			
+		elif path.exists(newName) == True:
+			newFile = open(newName, "a")
+			currentFile = newFile.name
+			newFile.close()
+	
+	elif int(choice) == 5: # Quit
+		
+		print("Notebook shutting down, thank you.")
+		keepGoing = False
