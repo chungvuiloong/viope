@@ -1,0 +1,2 @@
+INSERT INTO STUDENT (StudentID, Forename, Surname, Address)
+   VALUES(1,'Jennifer','Brown','12 Forest Road, AC53010, Littleville');
