@@ -1,0 +1,11 @@
+CREATE TABLE GRADE(
+	StudentID INTEGER,
+	CourseID INTEGER,
+	Grade INTEGER NOT NULL,
+	
+	PRIMARY KEY(StudentID, CourseID),
+	
+	FOREIGN KEY(StudentID) REFERENCES student(StudentID),
+  FOREIGN KEY(CourseID) REFERENCES course(CourseID)
+);
+
