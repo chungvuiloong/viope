@@ -1,1 +1,8 @@
 
+CREATE TABLE COURSE (
+   courseid   	INTEGER			PRIMARY KEY,
+   name    		VARCHAR(32)		NOT NULL,
+   starts    	DATE	
+
+);
+
