@@ -1,0 +1,30 @@
+
+import java.util.Scanner;
+
+public class Hours {
+    public static void main(String[] args) {
+        int amount = 0;
+        double sum = 0;
+        double average = 0;
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Amount of days: ");
+        amount = reader.nextInt();
+        double[] hours = new double[amount];
+
+        for(int i = 1; i <= amount; i++) {
+            System.out.print("Type in work hours of day " + i + ": ");
+            hours[i-1] = reader.nextDouble();
+            sum = sum + hours[i-1];
+        }
+     
+        average = sum/amount;
+        System.out.println("\nTotal of work hours: " + sum);
+        System.out.println("average work day length: " + average);
+        System.out.print("Inputted work hours:");
+
+        for(int j = 1; j <= amount; j++) {
+            System.out.print(" " + hours[j-1]);
+        }
+    }
+}
