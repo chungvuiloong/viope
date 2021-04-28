@@ -1,0 +1,2 @@
+INSERT INTO course (CourseID, Name , Starts )
+   VALUES ('1021','Introduction to databases', '2009-01-15');
