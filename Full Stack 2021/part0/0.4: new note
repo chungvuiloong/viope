@@ -1,0 +1,34 @@
+title Jirimicvl
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server-->browser: Return HTML-code. Allowing user to see HTML website
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: Returns main.css. It provides designs / colours to HTML.
+
+browser->server: https://studies.cs.helsinki.fi/exampleapp/spa.js
+server-->browser: Returns main.js Javascript functions in HTML website
+
+
+note over browser:
+browser search for any existing data via JSON and requests for it
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+
+note over server:
+receives request for data.json
+returns with content/ exising data in data.json
+end note over
+
+server-->browser: [{ content: "meow meow meow", date: "2021-04-29T11:44:18.324Z"}]
+
+
+note over browser:
+user inputs new message "Test" in "input" and clicks "save"
+onclick() / eventhandler send message "test" with its date of entry.
+end note
+browser-> server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/data.json
+server-> browser:[{content: "Test", date: "2021-04-29T12:13:56.326Z"}]
+
+
