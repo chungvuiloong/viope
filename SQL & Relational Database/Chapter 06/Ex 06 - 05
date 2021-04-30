@@ -1,1 +1,14 @@
+CREATE TABLE STUDENT (
+	StudentNro		SERIAL 			NOT NULL PRIMARY KEY,
+	FirstName		VARCHAR(32)		NOT NULL,
+	LastName		VARCHAR(60),
+	Address			VARCHAR(100),
+	Phone			VARCHAR(15)
+);
 
+INSERT INTO STUDENT (StudentNro, FirstName, LastName, Address, Phone)
+   VALUES  	(DEFAULT, 'Mary', 'Smith', 'Helsinki', '050 123456'),
+   			(DEFAULT, 'Math', 'Smith', 'Helsinki', '050 123456'),
+			(DEFAULT, 'Kate', 'Smith', 'Helsinki', '050 123456');
+SELECT *
+	FROM STUDENT
