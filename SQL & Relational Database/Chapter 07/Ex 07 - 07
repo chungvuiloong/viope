@@ -1,0 +1,3 @@
+SELECT * 
+	FROM PUBLISHER
+	WHERE CITY = 'Little Town' OR CITY = 'Creek-on-Trent'
