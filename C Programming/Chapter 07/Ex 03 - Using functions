@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main () {
+
+	int firstNum, secondNum, thirdNum, largeNum, smallNum;
+	
+	printf("Enter the 1. number:");
+	scanf("%d", &firstNum);
+	
+	printf("Enter the 2. number:");
+	scanf("%d", &secondNum);
+	
+	printf("Enter the 3. number:");
+	scanf("%d", &thirdNum);
+	
+	
+	/// Large algorim
+	if ( firstNum >= secondNum && firstNum >= thirdNum ){
+	    largeNum = firstNum;
+	    
+	} else if ( secondNum >= firstNum && secondNum >= thirdNum ) {
+	    largeNum = secondNum;
+	} else {
+	    largeNum = thirdNum;
+	}
+	
+	//small algorim
+	if ( firstNum <= secondNum && firstNum <= thirdNum ){
+	    smallNum = firstNum;
+	    
+	} else if ( secondNum <= firstNum && secondNum <= thirdNum ) {
+	    smallNum = secondNum;
+
+	} else {
+	    smallNum = thirdNum;
+
+	}
+	
+	printf("Among the numbers you entered,");
+	printf("the largest was %d and the smallest was %d.", largeNum, smallNum);
+    
+    return 0;
+
+
+}
