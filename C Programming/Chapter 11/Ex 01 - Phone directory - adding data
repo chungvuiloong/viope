@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{  
+      ///Format
+      //       4
+      // Firstname Lastname 050-3500980
+      // John Doe 041-3478924
+      // Brian Smith 040-3980982
+      // Brita Smith 05-4567393
+   
+   
+      int i, currentDirectory = 4;
+
+      FILE *writeFile = fopen("phonedir.txt", "a");
+    
+      struct person { 
+          char 	firstName	[20+1]; 
+          char 	lastName	[20+1]; 
+          char  teleNum		[20+1];
+      }; 
+    
+      struct person personList[50+1];
+      
+		   	printf("Enter first name:");
+		   	scanf("%s", &personList[i].firstName[0]);
+	
+			printf("Enter last name:");
+		   	scanf("%s", &personList[i].lastName[0]);
+		
+		   	printf("Enter telephone number:");
+			scanf("%s", &personList[i].teleNum[0]);
+      
+     // When data is saved, the value on the first line of the file must increase by one.
+     
+            if (writeFile == NULL) {  
+            printf("Error opening file.");
+            return 0;
+               
+            } else {
+            currentDirectory++;
+            fprintf(writeFile, "%d\n", currentDirectory);
+            fprintf(writeFile, "%s %s %s\n", 
+					personList[i].firstName, 
+					personList[i].lastName, 
+					personList[i].teleNum);
+            fclose(writeFile);
+            printf("Successfully saved the data.");
+            }
+        
+        return 0;
+}
