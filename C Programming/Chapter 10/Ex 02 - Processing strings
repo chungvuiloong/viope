@@ -1,0 +1,39 @@
+
+#include <stdio.h>
+
+int main()
+{
+    char string[16];
+    int numVowels = 0;
+        
+    printf("The program calculates the number of vowels.\nEnter a word: ");
+    scanf("%s", &string);
+        
+    for (int i = 0; string[i] != '\0'; i++)
+    {
+         
+         if (string[i] == 'a')
+         //printf("a");
+         numVowels++;
+         
+         if (string[i] == 'e')
+        // printf("e");
+         numVowels++;
+         
+         if (string[i] == 'u')
+         //printf("u");
+         numVowels++;
+         
+         if (string[i] == 'i')
+         //printf("i");
+         numVowels++;
+         
+         if (string[i] == 'o')
+         //printf("o");
+         numVowels++;
+         
+         
+    }
+    printf("The word contains %d vowels.", numVowels);
+    return 0;
+}
