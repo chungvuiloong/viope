@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+	int main (){
+	
+	    int num, evenNum = 0, oddNum = 1;
+		
+    	printf("Enter an integer: ");
+    	scanf("%d", &num);
+		
+		//Even number formula
+		//evenFormula = num % 2;
+		
+		if( num%2 == evenNum)
+        	printf("Number %d is even.", num);
+		
+		else if ( num%2 == oddNum)
+       		printf("Number %d is odd.", num);
+		
+		else 
+    		printf("ERROR!!!!");
+		
+			
+	return 0;
+	}
