@@ -1,0 +1,41 @@
+#include<stdio.h> 
+ 
+int main () {
+	
+	int i, h, day, dayCounter,sum;
+
+	float totalHours = 0.0, arrHours[50], hours, avgDays = 0.0;
+	
+	printf("The program calculates the total hours worked during a specific period and the average length of a day.\n\n");
+
+	printf("How many days:");
+	scanf("%d", &day);                  //works when day are INT
+	
+    for(i=0; i<day; i++)
+        {
+            //dayCounter++; V1
+            //i+1           V2
+            
+            printf("Enter the working hours for day %d:", i+1);
+            
+            //// taking input and storing it in an array arrHours
+            scanf("%f", &arrHours[i]);
+            
+            totalHours += arrHours[i];
+            avgDays = totalHours/day;
+            
+            
+         }
+
+	
+    printf("Total hours worked: %.1f\n", totalHours); // Working
+    printf("Average length of day: %.1f\n", avgDays); // Working
+    
+    printf("Hours entered: ");
+    for(i=0; i<day; i++)
+      printf("%.1f ", arrHours[i]);
+    
+    //printf("Hours entered: %.1f");
+	
+	return 0;
+ }
