@@ -1,0 +1,16 @@
+#include <stdio.h>
+#define RATIO 5.94573
+
+int main () {
+		   float finMarkka, euro;
+			
+	
+		   printf("Enter an amount in FIM:");		
+		   scanf("%f", &finMarkka);						//Declare integer
+
+			euro = finMarkka / RATIO ;
+
+			printf("FIM converted to euro: %.2f ", euro);
+
+	return 0;
+	}
