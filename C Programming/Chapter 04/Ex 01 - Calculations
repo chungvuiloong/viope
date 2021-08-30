@@ -1,0 +1,29 @@
+
+#include <stdio.h>
+
+	int main (){
+	
+		int firstNum, secondNum, addResult, subResult, mulResult;
+
+		printf("Enter the first number:");
+			scanf("%d", &firstNum);
+
+		printf("Enter the second number:");
+			scanf("%d", &secondNum);
+
+		
+		//Addition +
+		addResult = firstNum + secondNum; // Declare the sum -> addResult
+		printf("\n%d + %d = %d \n", firstNum, secondNum, addResult);
+		
+		//Subtraction -
+		subResult = firstNum - secondNum; // Declare the subtraction -> subResult
+		printf("%d - %d = %d \n", firstNum, secondNum, subResult);
+		
+		//Multiplication *
+		mulResult = firstNum * secondNum; // Declare the subtraction -> mulResult
+		printf("%d * %d = %d \n", firstNum, secondNum, mulResult);
+
+
+	return 0;
+	}
