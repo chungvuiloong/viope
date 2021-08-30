@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main () {
+
+		int score, i = 0, sum = 0;
+		float avg = 0.0;
+		
+		printf("The program calculates the average of scores you enter.\n");
+		printf("End with a negative integer.\n");
+	
+		while(score > 0) {
+			
+			printf("Enter score (4-10):");
+			scanf("%d", &score);
+			
+				 if ( score < 0) {
+				  break; 		 
+				  } 
+			
+			 	else if (4 <= score) {
+				i++;                                
+				sum = sum + score;
+
+				}
+			
+				else if (score <= 10) {
+				i++;                                
+				sum = sum + score;	
+
+				}
+            
+		 		avg = (float)sum/i;
+			
+        }
+		
+		printf("You entered %d scores.\n",i);
+		printf("Average score: %.2f\n",avg);
+
+        return 0;
+}
