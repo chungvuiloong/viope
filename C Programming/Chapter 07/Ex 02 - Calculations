@@ -1,0 +1,57 @@
+
+#include <stdio.h>
+
+int main()
+{
+  int choice, firstNum, secondNum, result;
+  do{
+
+    printf("\n1: sum of two numbers\n2: difference of two numbers\n3: product of two numbers\n<0: terminate the program\n");
+   
+    printf("Select calculation:");
+    scanf("%d", &choice);
+    
+    
+    //Firstnumber
+    
+    // printf("Enter the first number:");
+    // scanf("%d", &firstNum);
+    // printf("Enter the second number:");
+    // scanf("%d", &secondNum);
+    
+    
+    if(choice < 0) {
+      printf("Terminating the program...");
+    }
+    else if(choice == 1) {
+        printf("Enter the first number:");
+        scanf("%d", &firstNum);
+        printf("Enter the second number:");
+        scanf("%d", &secondNum);
+        result = firstNum + secondNum;
+      printf("%d + %d = %d\n", firstNum, secondNum, result);
+    }
+    else if(choice == 2) {
+        printf("Enter the first number:");
+    scanf("%d", &firstNum);
+    printf("Enter the second number:");
+    scanf("%d", &secondNum);
+      result = firstNum - secondNum;
+      printf("%d - %d = %d\n", firstNum, secondNum, result);
+    }
+    else if(choice == 3) {
+        printf("Enter the first number:");
+    scanf("%d", &firstNum);
+    printf("Enter the second number:");
+    scanf("%d", &secondNum);
+      result = firstNum * secondNum;
+      printf("%d * %d = %d\n", firstNum, secondNum, result);
+    }
+    
+    else {
+      printf("You entered an invalid number.\n");
+    }
+  }while(choice>0);
+
+  return 0;
+}
