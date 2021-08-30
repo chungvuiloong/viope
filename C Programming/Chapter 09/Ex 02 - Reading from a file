@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+
+
+int main () 
+
+	{
+		char *fileName = "numbers.s";
+		FILE *fileNumber = fopen("numbers.s", "r");
+		
+        int numberFind1, numberFind2, numberFind3, numberFind4;
+       
+        if((fileNumber) == NULL) {
+           printf("File not found!"); return 0;
+        } else {
+          fscanf(fileNumber, "%d %d %d %d", &numberFind1, &numberFind2, &numberFind3, &numberFind4); 
+          fclose(fileNumber);
+        
+          	printf("Numbers found in the file %s:\n", fileName);
+			printf("%d, %d, %d and %d\n", numberFind1, numberFind2, numberFind3, numberFind4);
+        }
+	
+	
+	
+		printf("\nSum of the numbers: %d", numberFind1+numberFind2+numberFind3+numberFind4);
+        return 0;
+	
+	
+	
+	
+	
+			//The file "numbers.s" contains 4 integers. 
+			//The numbers are on the first line of the file, separated by spaces. 
+			//Reads the integers from the file.
+			//calculates their sum. 
+			//Prints the numbers and the sum on the screen.
+
+	}
