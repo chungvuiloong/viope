@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int main () {
+	
+	//OUTPUT  
+	//FirstN LastN       Telephonenumber
+	//Brita  Smith       05-4567393
+	//Thomas Jefferson   05-6243370
+
+		int i, n;
+      	FILE *readFile = fopen("phonedir.txt", "r");
+
+         char 	firstName	      	[20+1];
+         char 	lastName	        [20+1]; 
+         char  	teleNum		      	[20+1];
+ 
+    
+	
+	//////////////V2 scanning
+
+        fscanf(readFile, "%d", &n);
+        
+        for(i = 0; i < n; i++) {
+                fscanf(readFile, "%s", firstName);
+                fscanf(readFile, "%s", lastName);
+                fscanf(readFile, "%s", teleNum);
+                printf("%s %s %s\n", firstName, lastName, teleNum);
+        }
+	
+        fclose(readFile);	
+			
+	
+	//////////////// Version 1
+					 //             else {
+			// 		//Allocating values
+			// 		fscanf(readFile, "%s %s %s %s %s",
+   //                   	personList[0].currentDirectory,
+   //    					personList[0].firstName, 
+   //    					personList[0].lastName, 
+   //    					personList[0].teleNum,
+			// 			  );
+
+			// 		//The value works
+   //    				printf("%s %s %s %s\n",
+   //    					personList[0].firstName, 
+   //    					personList[0].lastName, 
+   //    					personList[0].teleNum,
+			// 				personList[1].firstName );  Brian
+		
+        
+        return 0;
+}
