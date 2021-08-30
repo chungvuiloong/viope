@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+	int main () {
+	
+	    int num, evenNum = 0, oddNum = 1;
+		
+    	printf("Enter an integer: ");
+    	scanf("%d", &num);
+		
+		//Even number formula
+		//evenFormula = num / 2;
+		
+		if(num % 2 == evenNum)
+        	printf("The number is %d", evenNum);
+		
+		else if (num % 2 == oddNum)
+       		printf("The number is %d", oddNum);
+			
+	return 0;
+	}
