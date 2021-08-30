@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int main(){
+	
+	//Variables
+	int choice = 0;
+	
+	printf("1: subtraction \n2: addition \n3: multiplication \nSelect function:");
+	scanf("%d", &choice);
+	
+	int firstNum, secondNum;
+	
+	printf("Enter the first number:");
+	scanf("%d",&firstNum);
+	
+	printf("Enter the second number:");
+	scanf("%d",&secondNum);
+	
+		
+	///////////////////////	
+	
+	int result;
+	
+	switch (choice)
+	{
+		case 1:
+			{
+				result = firstNum - secondNum;
+				printf("%d - %d = %d", firstNum, secondNum, result);
+				break;
+			}
+			
+		case 2:
+			{
+				result = firstNum + secondNum;
+				printf("%d + %d = %d", firstNum, secondNum, result);
+				break;
+			}
+			
+		case 3:
+			{
+				result = firstNum * secondNum;
+				printf("%d * %d = %d", firstNum, secondNum, result);
+				break;
+			}
+			
+		default: 
+   		printf("Your input is outside the allowed range.");
+	}
+
+    return 0;
+}
