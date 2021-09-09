@@ -1,0 +1,26 @@
+function checkAge () {
+
+  var = document.getElementById("age").value;
+
+	//	Input age: 18
+	console.log("Input age: " + age);
+	
+	
+	
+	//	18 years or more: "The user is an adult."
+	if (age >= 18) {
+	console.log("The user is an adult.");
+	}
+	
+	//	Under 18 years, but over 0 years: 
+	//	"The user is not yet an adult."
+	else if ((18 > age) && (age > 0)) {
+	console.log("The user is not yet an adult.");
+	}
+	
+	//	Otherwise: "Invalid input!"
+	else {
+	console.log("Invalid input!");
+	}
+
+}
